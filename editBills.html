@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	<title>Bill Budgeter</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+	<script type="text/javascript" src="./main.js"></script>
+</head>
+<body>
+	<div class="container">
+		<nav class="nav justify-content-between styledNav">
+			<span class="lead">Bill Budgeter</span>
+			<a class="btn btn-primary btn-sm" href="./contact.html">Contact us</a>
+		</nav>
+		<div class="card lessWidthCenter">
+		  	<div class="card-body">
+		    	<form class="billsForm" id="billsForm">
+		    		<div class="form-group row">
+		    			<label for="categorySelect" class="col-lg-4 col-form-label">Category</label>
+			    		<div class="col-lg-8">
+					        <select id="categorySelect" class="form-control"> 
+					        	<option>Car Payment</option>
+					        	<option>Credit Card</option>
+					        	<option>Insurance</option>
+					        	<option>Loan</option>
+					        	<option>Other</option>
+					        	<option>Phone</option>
+					        	<option>Rent</option>
+					        </select>
+						</div>
+					</div>
+					<div class="form-group row">
+		    			<label for="amount" class="col-lg-4 col-form-label">Amount</label>
+		    			<div class="input-group col-lg-8">
+						    <div class="input-group-prepend">
+						    	<span class="input-group-text">$</span>
+						  	</div>
+						  	<input id="amount" type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+						  	<div class="input-group-append">
+						    	<span class="input-group-text">.00</span>
+						  	</div>
+						</div>
+					</div>
+					<div class="form-group row">
+		    			<label for="dueDate" class="col-lg-4 col-form-label">Due Date</label>
+			    		<div class="col-lg-8">
+					    	<input id="dueDate" type="date" class="form-control">
+						</div>
+					</div>
+					<div class="form-group row">
+		    			<label for="notes" class="col-lg-4 col-form-label">Notes</label>
+			    		<div class="col-lg-8">
+					    	<textarea id="notes" type="text" class="form-control" rows="2"></textarea>
+						</div>
+					</div>
+					<div class="form-group row" id="annualIncome">
+		    			<label for="income" class="col-lg-4 col-form-label">Annual Income</label>
+		    			<div class="input-group col-lg-8">
+						    <div class="input-group-prepend">
+						    	<span class="input-group-text">$</span>
+						  	</div>
+						  	<input id="income" type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+						  	<div class="input-group-append">
+						    	<span class="input-group-text">.00</span>
+						  	</div>
+						</div>
+					</div>
+		    	</form>
+		    	<div class="block float-right">
+			    	<button class="btn btn-primary btn-sm" id="nextBillBtn" onclick='saveBill()'>Next</button>
+			    	<button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#emailModal">Done</button>
+			    </div>
+		  	</div>
+		</div>
+		<div id="saveBillAlert"></div>
+	</div>
+	<div class="fixed-bottom footer"></div>
+	<div class="fixed-bottom footer"></div>
+	<div class="modal fade" id="emailModal" tabindex="-1" role="dialog" aria-hidden="true">
+	  <div class="modal-dialog modal-dialog-centered" role="document">
+	    <div class="modal-content">
+	      <div class="modal-body">
+	       	<span class="lead">Please enter your email address to continue</span>
+	       	<br><br><br>
+	        <form>
+	        	<div class="form-group row">
+	        		<div class="col-8 center-margins">
+	        			<input type="email" class="form-control" placeholder="you@email.com">
+	        		</div>
+	        	</div>
+	        </form>
+	      </div>
+	      <div class="modal-footer">
+	        <a class="btn btn-primary btn-sm" href="./dashboard.html">Ok</a>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+</body>
+</html>

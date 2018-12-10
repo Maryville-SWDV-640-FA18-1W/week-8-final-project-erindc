@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	<title>Bill Budgeter</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+	<script type="text/javascript" src="./main.js"></script>
+</head>
+<body>
+	<div class="container">
+		<nav class="nav justify-content-between styledNav">
+			<span class="lead">Bill Budgeter</span>
+			<button class="btn btn-primary btn-sm" onclick="goBack()">Return</button>
+		</nav>
+		<div id="contactPage">
+			<form class="mt-5">
+				<div class="form-group row">
+					<div class="col-lg-8 center-margins">
+				    	<textarea id="notes" type="text" class="form-control" rows="5" placeholder="Feedback/Questions/Concerns"></textarea>
+				    	<div class="mt-2 float-right">
+					    	<button class="btn btn-primary btn-sm" onclick="goBack()">Cancel</button>
+					    	<button class="btn btn-primary btn-sm" onclick="submitContactForm()">Submit</button>
+					    </div>
+					</div>
+				</div>
+			</form>
+			<div class="center-margins fw250 block mt-contact">
+				Or give us a call at 123-456-7891
+			</div>
+		</div>
+	</div>
+	<div class="fixed-bottom footer"></div>
+</body>
+</html>
