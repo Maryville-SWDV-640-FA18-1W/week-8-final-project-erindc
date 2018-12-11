@@ -10,6 +10,33 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 	<title>Bill Budgeter</title>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+      	google.charts.load('current', {'packages':['corechart']});
+      	google.charts.setOnLoadCallback(drawChart);
+
+      	function drawChart() {
+        	var data = new google.visualization.DataTable();
+	        data.addColumn('string', 'Category');
+	        data.addColumn('number', 'Percentage');
+	        data.addRows([
+          		['Car Payment', 300],
+          		['Insurance', 100],
+          		['Rent', 600],
+          		['Phone Bill', 80],
+          		['Credit Card', 150]
+        	]);
+
+        	var options = {'colors': ['#160e37', '#443e5e', '#736e87', '#a19eaf', '#d0ced7']};
+
+	        var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+	        chart.draw(data, options);
+      	}
+
+      	$(window).resize(function(){
+			drawChart();
+		});
+    </script>
 	<script type="text/javascript" src="./main.js"></script>
 </head>
 <body>
@@ -21,6 +48,7 @@
 				<a class="btn btn-primary btn-sm" href="./account.html">Account</a>
 			</div>
 		</nav>
+		<div id="chart_div" class="piechart"></div>
 	</div>
 	<div class="fixed-bottom footer"></div>
 </body>
