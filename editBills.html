@@ -72,15 +72,14 @@
 						</div>
 					</div>
 		    	</form>
-		    	<div class="block float-right">
+		    	<div id="billsBtnDiv" class="block float-right">
 			    	<button class="btn btn-primary btn-sm" id="nextBillBtn" onclick='saveBill()'>Next</button>
-			    	<button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#emailModal">Done</button>
+			    	<button id="billsDone" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#emailModal">Done</button>
 			    </div>
 		  	</div>
 		</div>
 		<div id="saveBillAlert"></div>
 	</div>
-	<div class="fixed-bottom footer"></div>
 	<div class="fixed-bottom footer"></div>
 	<div class="modal fade" id="emailModal" tabindex="-1" role="dialog" aria-hidden="true">
 	  <div class="modal-dialog modal-dialog-centered" role="document">

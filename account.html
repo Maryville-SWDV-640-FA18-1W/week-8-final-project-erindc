@@ -16,23 +16,40 @@
 	<div class="container">
 		<nav class="nav justify-content-between styledNav">
 			<span class="lead">Bill Budgeter</span>
-			<button class="btn btn-primary btn-sm" onclick="goBack()">Return</button>
+			<div>
+				<a class="btn btn-primary btn-sm btn-a" href="./contact.html">Contact us</a>
+				<a class="btn btn-primary btn-sm btn-a" href="./dashboard.html">Dashboard</a>
+			</div>
 		</nav>
-		<div id="contactPage">
-			<form class="mt-5">
-				<div class="form-group row">
-					<div class="col-lg-8 center-margins">
-				    	<textarea id="notes" type="text" class="form-control" rows="5" placeholder="Feedback/Questions/Concerns"></textarea>
-				    	<div class="mt-2 float-right">
-					    	<button class="btn btn-primary btn-sm" onclick="javascript:goBack()">Cancel</button>
-					    	<button class="btn btn-primary btn-sm" 
-					    	onclick="submitContactForm()">Submit</button>
-					    </div>
+		<div class="row">
+			<div class="col-lg-6 mx-auto">
+				<div class="card mt-5">
+					<div class="card-body">
+						<form>
+						  <div class="form-group row">
+						    <label for="inputName" class="col-sm-2 col-form-label">Name</label>
+						    <div class="col-sm-10">
+						      <input type="text" class="form-control" id="inputName">
+						    </div>
+						  </div>
+						  <div class="form-group row">
+						    <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+						    <div class="col-sm-10">
+						      <input type="email" class="form-control" id="inputEmail">
+						    </div>
+						  </div>
+						  <div class="form-group row">
+						    <label for="inputIncome" class="col-sm-2 col-form-label">Annual Income</label>
+						    <div class="col-sm-10">
+						      <input type="number" class="form-control" id="inputIncome">
+						    </div>
+						  </div>
+						  <button class="btn btn-primary btn-sm float-right" 
+						  onclick="submitAccountForm()">Save</button>
+						</form>
 					</div>
 				</div>
-			</form>
-			<div class="center-margins fw250 block mt-contact">
-				Or give us a call at 123-456-7891
+				<div id="accountAlert"></div>
 			</div>
 		</div>
 	</div>

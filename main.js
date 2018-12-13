@@ -16,7 +16,14 @@ function goBack() {
 }
 
 function submitContactForm() {
-	var contactPage = document.getElementById('contactPage');
 	var html = Mustache.render(alert, {message: "Thank you for your feedback, we will be in touch"})
 	$('#contactPage').html(html);
+}
+
+function submitAccountForm() {
+	var html = Mustache.render(alert, {message: "Changes saved"})
+	$('#accountAlert').html(html);
+	setTimeout(function() {
+		$('#accountAlert').html(null);;
+	}, 2000);
 }

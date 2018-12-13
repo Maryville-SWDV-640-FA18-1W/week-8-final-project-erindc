@@ -44,12 +44,70 @@
 		<nav class="nav justify-content-between styledNav">
 			<span class="lead">Bill Budgeter</span>
 			<div>
-				<a class="btn btn-primary btn-sm" href="./contact.html">Contact us</a>
-				<a class="btn btn-primary btn-sm" href="./account.html">Account</a>
+				<a class="btn btn-primary btn-sm btn-a" href="./contact.html">Contact us</a>
+				<a class="btn btn-primary btn-sm btn-a" href="./account.html">Account</a>
 			</div>
 		</nav>
 		<div id="chart_div" class="piechart"></div>
+		<div class="row">
+			<div class="col-lg-10 mx-auto">
+				<div class="card mb-5">
+					<div class="card-header">
+						<span class="lead">Your Bills</span>
+						<a class="btn btn-primary btn-sm btn-a float-right" href="./editbills.html" onclick="editFromDash()">Edit</a>
+					</div>
+					<div class="card-body">
+						<table class="table table-responsive-md">
+						  <thead>
+						    <tr>
+						      <th scope="col">Category</th>
+						      <th scope="col">Amount</th>
+						      <th scope="col">Due Date</th>
+						      <th scope="col">Budgeted Amount</th>
+						    </tr>
+						  </thead>
+						  <tbody>
+						    <tr>
+						      <td>Rent</td>
+						      <td>600</td>
+						      <td>1/1/2019</td>
+						      <td><input type="number" class="form-control form-control-sm fw250"></td>
+						    </tr>
+						    <tr>
+						      <td>Car Payment</td>
+						      <td>300</td>
+						      <td>1/12/2019</td>
+						      <td><input type="number" class="form-control form-control-sm fw250"></td>
+						    </tr>
+						    <tr>
+						      <td>Insurance</td>
+						      <td>120</td>
+						      <td>1/28/2019</td>
+						      <td><input type="number" class="form-control form-control-sm fw250"></td>
+						    </tr>
+						    <tr>
+						      <td>Credit Card</td>
+						      <td>150</td>
+						      <td>1/11/2019</td>
+						      <td><input type="number" class="form-control form-control-sm fw250"></td>
+						    </tr>
+						    <tr>
+						      <td>Phone Bill</td>
+						      <td>80</td>
+						      <td>1/06/2019</td>
+						      <td><input type="number" class="form-control form-control-sm fw250"></td>
+						    </tr>
+						  </tbody>
+						</table>
+					</div>
+				</div>
+			</div>
 	</div>
-	<div class="fixed-bottom footer"></div>
+</div>
+<div class="fixed-bottom footer"></div>
 </body>
 </html>
+
+
+
+

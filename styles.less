@@ -15,10 +15,15 @@
 
 body {
 	margin-top: @base-px / 10;
+	cursor: default;
 }
 
 h2, h3 {
 	font-weight: @heading-weight;
+}
+
+.clickable {
+	cursor: pointer;
 }
 
 .styledNav {
@@ -27,7 +32,7 @@ h2, h3 {
 	border-bottom: 1px solid @secondary-gray;
 }
 
-.btn-primary, .btn-primary:hover, .btn-primary:focus, a:not([href]):not([tabindex]), a:not([href]):not([tabindex]):hover, a:not([href]):not([tabindex]):focus, .btn:not(:disabled):not(.disabled):focus {
+.btn-primary, .btn-primary:hover, .btn-primary:focus, .btn:not(:disabled):not(.disabled):focus, .btn-a:not([href]):not([tabindex]), btn-a:not([href]):not([tabindex]):hover {
 	color: @white;
     background-color: @primary-teal;
     border-color: @primary-teal;
