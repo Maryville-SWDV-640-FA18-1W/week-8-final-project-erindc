@@ -24,6 +24,15 @@ function submitAccountForm() {
 	var html = Mustache.render(alert, {message: "Changes saved"})
 	$('#accountAlert').html(html);
 	setTimeout(function() {
-		$('#accountAlert').html(null);;
+		$('#accountAlert').html(null);
+	}, 2000);
+
+}
+
+function updateBills() {
+	var html = Mustache.render(alert, {message: "Bill saved"})
+    $('#updateBillAlert').html(html);
+	setTimeout(function() {
+		$('#updateBillAlert').html(null);;
 	}, 2000);
 }

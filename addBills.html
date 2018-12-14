@@ -59,15 +59,47 @@
 					    	<textarea id="notes" type="text" class="form-control" rows="2"></textarea>
 						</div>
 					</div>
+					<div class="form-group row" id="annualIncome">
+		    			<label for="income" class="col-lg-4 col-form-label">Annual Income</label>
+		    			<div class="input-group col-lg-8">
+						    <div class="input-group-prepend">
+						    	<span class="input-group-text">$</span>
+						  	</div>
+						  	<input id="income" type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+						  	<div class="input-group-append">
+						    	<span class="input-group-text">.00</span>
+						  	</div>
+						</div>
+					</div>
 		    	</form>
 		    	<div id="billsBtnDiv" class="block float-right">
-			    	<button class="btn btn-primary btn-sm" id="nextBillBtn" onclick='updateBills()'>Next</button>
-			    	<a id="billsDone" class="btn btn-primary btn-sm btn-a" href="./dashboard.html">Done</a>
+			    	<button class="btn btn-primary btn-sm" id="nextBillBtn" onclick='saveBill()'>Next</button>
+			    	<button id="billsDone" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#emailModal">Done</button>
 			    </div>
 		  	</div>
 		</div>
-		<div id="updateBillAlert"></div>
+		<div id="saveBillAlert"></div>
 	</div>
 	<div class="fixed-bottom footer"></div>
+	<div class="modal fade" id="emailModal" tabindex="-1" role="dialog" aria-hidden="true">
+	  <div class="modal-dialog modal-dialog-centered" role="document">
+	    <div class="modal-content">
+	      <div class="modal-body">
+	       	<span class="lead">Please enter your email address to continue</span>
+	       	<br><br><br>
+	        <form>
+	        	<div class="form-group row">
+	        		<div class="col-8 center-margins">
+	        			<input type="email" class="form-control" placeholder="you@email.com">
+	        		</div>
+	        	</div>
+	        </form>
+	      </div>
+	      <div class="modal-footer">
+	        <a class="btn btn-primary btn-sm" href="./dashboard.html">Ok</a>
+	      </div>
+	    </div>
+	  </div>
+	</div>
 </body>
 </html>
